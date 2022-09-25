@@ -33,8 +33,23 @@ function operate(op, num1, num2) {
             result: numsToOperate.reduce((x, y) => x / y)
         }
     }
+    // check if op is valid
+    let opIsValid;
+    // check if op matches a key in the operators array
+    for (let key in operators) {
+        if (op === key) {
+            opIsValid = true;
+            break;
+        }
+        else {
+            opIsValid = false;
+        }
+    }
 
+    // generate error response
+    const errorResponse = " i only accept sum, subtract, divide, and reduce.";
 
-    return operators[op].result;
+    return (opIsValid ? operators[op].result : errorResponse);
+
 
 }
