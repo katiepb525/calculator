@@ -1,18 +1,19 @@
-function add(x, y) {
-    return x + y;
-}
+// function add(x, y) {
+//     return x + y;
+// }
 
-function subtract(x, y) {
-    return x - y;
-}
+// function subtract(x, y) {
+//     return x - y;
+// }
 
-function multiply(x, y) {
-    return x * y;
-}
+// function multiply(x, y) {
+//     return x * y;
+// }
 
-function divide(x, y) {
-    return x / y;
-}
+// function divide(x, y) {
+//     return x / y;
+// }
+
 // take a string and two numbers to be used, return result
 function operate(op, num1, num2) {
 
