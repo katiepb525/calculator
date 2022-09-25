@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.calculator-body {
+    margin: 10vh auto;
+    border: solid black 2px;
+    max-width: 300px;
+    max-height: 800px;
+    padding: 1.5em;
+}
+
+.display {
+    border: solid black 1px;
+    padding: 1em;
+}
+
+.btn-grid {
+    padding-top: 1em;
+    display: grid;
+    gap: 10px;
+    grid-template:
+        'clear exponent equals multiply'
+        'seven eight nine divide'
+        'four five six subtract'
+        'one two three sum'
+        'zero zero decimal sum';
+}
+
+.btn {
+    padding: 1em;
+}
+
+/* button positions */
+
+/* numbers */
+
+#zero {
+    grid-area: zero;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+/* operators */
+#sum {
+    grid-area: sum;
+}
+
+#subtract {
+    grid-area: subtract;
+}
+
+#multiply {
+    grid-area: multiply;
+}
+
+#divide {
+    grid-area: divide;
+}
+
+#exponent {
+    grid-area: exponent;
+}
+
+#decimal {
+    grid-area: decimal;
+}
+
+#equals {
+    grid-area: equals;
+}
+
+/* other */
+
+#clear {
+    grid-area: clear;
+}
