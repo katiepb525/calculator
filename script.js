@@ -38,3 +38,12 @@ function operate(op, num1, num2) {
     return (opIsValid ? operators[op].result : errorResponse);
 
 }
+
+// when a num button is clicked, display it on the calcuator
+
+// get an array of all of the number buttons
+const numBtns = document.getElementsByClassName('btn num');
+// loop through all the number buttons and add an event listener to each
+for (i = 0; i < numBtns.length; i++) {
+    numBtns[i].addEventListener("click", () => console.log("i work"));
+}
