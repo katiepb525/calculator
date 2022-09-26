@@ -19,7 +19,7 @@
     padding: 1em;
 }
 
-.btn-grid {
+.calculator-grid {
     padding-top: 1em;
     display: grid;
     gap: 10px;
