@@ -17,6 +17,7 @@
 .display {
     border: solid black 1px;
     padding: 1em;
+    display: flex;
 }
 
 .calculator-grid {

@@ -39,11 +39,38 @@ function operate(op, num1, num2) {
 
 }
 
-// when a num button is clicked, display it on the calcuator
+////// when a num button is clicked, display it on the calcuator
 
 // get an array of all of the number buttons
 const numBtns = document.getElementsByClassName('btn num');
-// loop through all the number buttons and add an event listener to each
-for (i = 0; i < numBtns.length; i++) {
-    numBtns[i].addEventListener("click", () => console.log("i work"));
+
+// store the current number
+let currNum;
+
+// store the current DISPLAYED number 
+let displayNum = "";
+
+// store an array of all previous selected numbers
+let displayedNums = [];
+
+// select the display div itself
+const divDisplay = document.querySelector('.display');
+
+// loop through all number buttons
+for (let i = 0; i < numBtns.length; i++) {
+    // get text content of current button
+    const rawNum = numBtns[i].textContent;
+
+    // when button is clicked
+    numBtns[i].addEventListener("click", () => {
+        // add current DISPLAYED number to div display's text content
+        displayNum += rawNum;
+        divDisplay.textContent = displayNum;
+
+        // convert currNum to number
+        currNum = Number(rawNum);
+        // push to array
+        displayedNums.push(currNum);
+    })
+
 }
