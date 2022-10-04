@@ -47,16 +47,15 @@ const numBtns = document.getElementsByClassName('btn num');
 // store the current number
 let currNum;
 
-// store the current DISPLAYED number 
-let displayNum = "";
-
 // store an array of all previous selected numbers
 let displayedNums = [];
 
 // select the display div itself
 const divDisplay = document.querySelector('.display');
+// store the current DISPLAYED number 
+let displayNum = "";
 
-// loop through all number buttons
+// loop through all number buttons, assign event listeners
 for (let i = 0; i < numBtns.length; i++) {
     // get text content of current button
     const rawNum = numBtns[i].textContent;
@@ -67,7 +66,7 @@ for (let i = 0; i < numBtns.length; i++) {
         displayNum += rawNum;
         divDisplay.textContent = displayNum;
 
-        // convert currNum to number
+        // convert rawNum to number value
         currNum = Number(rawNum);
         // push to array
         displayedNums.push(currNum);
