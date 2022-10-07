@@ -73,3 +73,76 @@ for (let i = 0; i < numBtns.length; i++) {
     })
 
 }
+
+// function to convert the current typed number from the display into an actual number 
+function convertArrayToNum(array) {
+    let jointArray = array.join();
+    let noCommas = jointArray.replace(/,/g, '');
+    return Number(noCommas);
+}
+
+
+///// OPERATOR BUTTONS /////
+// event listeners for all operation functions (sum, subtract, etc.)
+
+//// EQUAL BUTTON ////
+// grab equal button
+const equalBtn = document.getElementById('equals');
+// bool if equals has been clicked lol
+let equalsClicked = false;
+
+equalBtn.addEventListener("click", () => {
+    equalsClicked = true;
+})
+
+
+/// ADD BUTTON ////
+// get add button
+const addBtn = document.getElementById('sum');
+// count how many times add btn has been clicked
+let addBtnCount = 0;
+// store first and last displayed numbers
+let lastDisplayNum = 0;
+let secondDisplayNum = 0;
+
+addBtn.addEventListener("click", () => {
+    // track how many times button is clicked
+    ++addBtnCount;
+    // if addbtn has been clicked only once...
+    if (addBtnCount == 1) {
+        //grab the last displayed number
+        lastDisplayNum = convertArrayToNum(displayedNums);
+        // clear display and displayedNums array
+        displayNum = ""
+        divDisplay.textContent = displayNum;
+        displayedNums = [];
+    } // make sure to check if displayednums isnt null...
+    else if (addBtnCount <= 2 || equalsClicked == true) {
+        // grab second number entered 
+        secondDisplayNum = convertArrayToNum(displayedNums);
+        // add it to previous using operation
+        let displaySum = operate("sum", secondDisplayNum, lastDisplayNum);
+        // return final result in display
+        displayNum = displaySum;
+        divDisplay.textContent = displayNum;
+        // clear displayedNums
+        displayedNums = [];
+    }
+
+
+})
+
+
+
+// when any operation is called..
+
+
+
+
+
+
+
+// create clear function (clears display, calculated former and current values)
+
+// add event listener for clear function
+
