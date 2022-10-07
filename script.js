@@ -38,8 +38,8 @@ function operate(op, num1, num2) {
     return (opIsValid ? operators[op].result : errorResponse);
 
 }
-
-////// when a num button is clicked, display it on the calcuator
+/////// NUMBER BUTTONS //////
+////// when a num button is clicked, display it on the calcuator /////
 
 // get an array of all of the number buttons
 const numBtns = document.getElementsByClassName('btn num');
