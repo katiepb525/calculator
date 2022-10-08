@@ -137,8 +137,10 @@ addBtn.addEventListener("click", () => {
         // return final result in display
         displayNum = displaySum;
         divDisplay.textContent = displayNum;
-        // clear displayedNums
-        displayedNums = [];
+        // store result as first num 
+        lastDisplayNum = displaySum;
+        // reset counter?
+        addBtnCount = 0;
     }
 
 
