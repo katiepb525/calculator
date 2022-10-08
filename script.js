@@ -112,8 +112,14 @@ addBtn.addEventListener("click", () => {
     ++addBtnCount;
     // if addbtn has been clicked only once...
     if (addBtnCount == 1) {
-        //grab the last displayed number
-        lastDisplayNum = convertArrayToNum(displayedNums);
+        if (lastDisplayNum == 0) {
+            //grab the last displayed number
+            lastDisplayNum = convertArrayToNum(displayedNums);
+        }
+        else {
+            // grab second number entered 
+            secondDisplayNum = convertArrayToNum(displayedNums);
+        }
         // clear display and displayedNums array
         displayNum = ""
         divDisplay.textContent = displayNum;
