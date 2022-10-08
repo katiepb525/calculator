@@ -104,6 +104,8 @@ let addBtnCount = 0;
 // store first and last displayed numbers
 let lastDisplayNum = 0;
 let secondDisplayNum = 0;
+// store sum of two numbers
+let displaySum = 0;
 
 addBtn.addEventListener("click", () => {
     // track how many times button is clicked
