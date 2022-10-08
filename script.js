@@ -133,7 +133,7 @@ addBtn.addEventListener("click", () => {
         divDisplay.textContent = displayNum;
         displayedNums = [];
         // add it to previous using operation
-        let displaySum = operate("sum", secondDisplayNum, lastDisplayNum);
+        displaySum = operate("sum", secondDisplayNum, lastDisplayNum);
         // return final result in display
         displayNum = displaySum;
         divDisplay.textContent = displayNum;
