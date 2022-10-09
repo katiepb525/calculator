@@ -115,40 +115,6 @@ function convertArrayToNum(array) {
 ///// OPERATOR BUTTONS /////
 // event listeners for all operation functions (sum, subtract, etc.)
 
-//// EQUAL BUTTON ////
-// grab equal button
-const equalBtn = document.getElementById('equals');
-// bool if equals has been clicked lol
-let equalsClicked = false;
-
-equalBtn.addEventListener("click", () => {
-    equalsClicked = true;
-})
-
-
-/// ADD BUTTON ////
-// get add button
-const addBtn = document.getElementById('sum');
-// count how many times add btn has been clicked
-let addBtnCount = 0;
-// store first and last displayed numbers
-let lastDisplayNum;
-let secondDisplayNum;
-// store sum of two numbers
-let displaySum = 0;
-
-addBtn.addEventListener("click", () => {
-    // track how many times button is clicked
-    ++addBtnCount;
-    console.log(addBtnCount);
-    // if first time being clicked...
-    if (addBtnCount == 1) {
-        if (lastDisplayNum == undefined) {
-            //grab the last displayed number
-            lastDisplayNum = convertArrayToNum(displayedNums);
-
-            //append to upper display
-            formerNumsDiv.textContent += `${lastDisplayNum} +`
 
         }
         else {
