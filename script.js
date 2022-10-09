@@ -52,6 +52,17 @@ let displayedNums = [];
 
 // select the display div itself
 const divDisplay = document.querySelector('.display');
+
+// store the formerly entered numbers and operators in a div called "formerNumsList"
+const formerNumsDiv = document.createElement("div");
+formerNumsDiv.classList.add("formerNumsList");
+divDisplay.appendChild(formerNumsDiv);
+formerNumsDiv.style.fontSize = "14px"
+// store the currently entered number in its own div
+const currentNumDiv = document.createElement("div");
+currentNumDiv.classList.add("currentNum");
+divDisplay.appendChild(currentNumDiv);
+
 // store the current DISPLAYED number 
 let displayNum = "";
 
