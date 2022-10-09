@@ -87,8 +87,7 @@ for (let i = 0; i < numBtns.length; i++) {
     numBtns[i].addEventListener("click", () => {
         // add current DISPLAYED number to div display's text content
         displayNum += rawNum;
-        divDisplay.textContent = displayNum;
-
+        currentNumDiv.textContent = displayNum;
         // convert rawNum to number value
         currNum = Number(rawNum);
         // push to array
