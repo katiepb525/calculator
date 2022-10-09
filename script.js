@@ -40,6 +40,16 @@ function operate(op, num1, num2) {
     return (opIsValid ? operators[op].result : errorResponse);
 
 }
+
+// store an object of all selected inputs
+let selectedInputs = {
+    firstInput: undefined,
+    operator: undefined,
+    secondInput: undefined,
+    result: undefined
+};
+
+
 /////// NUMBER BUTTONS //////
 ////// when a num button is clicked, display it on the calcuator /////
 
