@@ -113,49 +113,62 @@ const addBtn = document.getElementById('sum');
 // count how many times add btn has been clicked
 let addBtnCount = 0;
 // store first and last displayed numbers
-let lastDisplayNum = 0;
-let secondDisplayNum = 0;
+let lastDisplayNum;
+let secondDisplayNum;
 // store sum of two numbers
 let displaySum = 0;
 
 addBtn.addEventListener("click", () => {
     // track how many times button is clicked
     ++addBtnCount;
-    // if addbtn has been clicked only once...
+    console.log(addBtnCount);
+    // if first time being clicked...
     if (addBtnCount == 1) {
-        if (lastDisplayNum == 0) {
+        if (lastDisplayNum == undefined) {
             //grab the last displayed number
             lastDisplayNum = convertArrayToNum(displayedNums);
+
+            //append to upper display
+            formerNumsDiv.textContent += `${lastDisplayNum} +`
+
         }
         else {
+            // grab second number entered 
+            secondDisplayNum = convertArrayToNum(displayedNums);
+            // append to upper display
+            formerNumsDiv.textContent += `${secondDisplayNum} +`
+        }
+        // clear display and displayedNums array
+        displayNum = ""
+        currentNumDiv.textContent = displayNum;
+        displayedNums = [];
+    } // make sure to check if displayednums isnt null...
+    else if (addBtnCount >= 2) {
+        // if second number is undefined
+        if (secondDisplayNum == undefined) {
             // grab second number entered 
             secondDisplayNum = convertArrayToNum(displayedNums);
         }
         // clear display and displayedNums array
         displayNum = ""
-        divDisplay.textContent = displayNum;
-        displayedNums = [];
-    } // make sure to check if displayednums isnt null...
-    else if (addBtnCount >= 2) {
-        // grab second number entered 
-        secondDisplayNum = convertArrayToNum(displayedNums);
-        // clear display and displayedNums array
-        displayNum = ""
-        divDisplay.textContent = displayNum;
+        currentNumDiv.textContent = displayNum;
         displayedNums = [];
         // add it to previous using operation
         displaySum = operate("sum", secondDisplayNum, lastDisplayNum);
         // return final result in display
         displayNum = displaySum;
-        divDisplay.textContent = displayNum;
+        currentNumDiv.textContent = `= ${displayNum}`;
+        // update former numbers entered display
+        formerNumsDiv.textContent += `${secondDisplayNum} +`
         // store result as first num 
         lastDisplayNum = displaySum;
         // reset counter?
         addBtnCount = 0;
     }
 
+}
 
-})
+)
 
 
 
