@@ -115,6 +115,8 @@ function convertArrayToNum(array) {
 ///// OPERATOR BUTTONS /////
 // event listeners for all operation functions (sum, subtract, etc.)
 
+// get an array of all of the operator buttons
+const opBtns = document.getElementsByClassName('btn operator');
 
         }
         else {
