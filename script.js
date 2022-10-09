@@ -118,40 +118,6 @@ function convertArrayToNum(array) {
 // get an array of all of the operator buttons
 const opBtns = document.getElementsByClassName('btn operator');
 
-        }
-        else {
-            // grab second number entered 
-            secondDisplayNum = convertArrayToNum(displayedNums);
-            // append to upper display
-            formerNumsDiv.textContent += `${secondDisplayNum} +`
-        }
-        // clear display and displayedNums array
-        displayNum = ""
-        currentNumDiv.textContent = displayNum;
-        displayedNums = [];
-    } // make sure to check if displayednums isnt null...
-    else if (addBtnCount >= 2) {
-        // if second number is undefined
-        if (secondDisplayNum == undefined) {
-            // grab second number entered 
-            secondDisplayNum = convertArrayToNum(displayedNums);
-        }
-        // clear display and displayedNums array
-        displayNum = ""
-        currentNumDiv.textContent = displayNum;
-        displayedNums = [];
-        // add it to previous using operation
-        displaySum = operate("sum", secondDisplayNum, lastDisplayNum);
-        // return final result in display
-        displayNum = displaySum;
-        currentNumDiv.textContent = `= ${displayNum}`;
-        // update former numbers entered display
-        formerNumsDiv.textContent += `${secondDisplayNum} +`
-        // store result as first num 
-        lastDisplayNum = displaySum;
-        // reset counter?
-        addBtnCount = 0;
-    }
 
 }
 
