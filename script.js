@@ -59,8 +59,8 @@ const numBtns = document.getElementsByClassName('btn num');
 // store the current number
 let currNum;
 
-// store an array of all previous selected numbers
-let displayedNums = [];
+// store an array of all selected num inputs
+let numInputs = [];
 
 // select the display div itself
 const divDisplay = document.querySelector('.display');
@@ -92,7 +92,8 @@ for (let i = 0; i < numBtns.length; i++) {
         // convert rawNum to number value
         currNum = Number(rawNum);
         // push to array
-        displayedNums.push(currNum);
+        numInputs.push(currNum);
+        console.log(numInputs);
     })
 
 }
