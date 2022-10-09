@@ -101,7 +101,14 @@ for (let i = 0; i < numBtns.length; i++) {
 function convertArrayToNum(array) {
     let jointArray = array.join();
     let noCommas = jointArray.replace(/,/g, '');
-    return Number(noCommas);
+    // will return NaN if no number is entered!!!!
+    let result = parseInt(noCommas);;
+    if (isNaN(result)) {
+        return undefined;
+    }
+    else {
+        return result;
+    }
 }
 
 
