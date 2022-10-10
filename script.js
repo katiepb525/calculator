@@ -151,6 +151,8 @@ for (let i = 0; i < opBtns.length; i++) {
                 // replace first input with result
                 selectedInputs.firstInput = selectedInputs.result;
 
+                // return result
+                console.log(selectedInputs.result);
 
 
 
