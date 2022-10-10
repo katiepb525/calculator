@@ -79,6 +79,9 @@ divDisplay.appendChild(currentNumDiv);
 // store the current DISPLAYED number 
 let displayNum = "";
 
+// store the last DISPLAYED number
+let lastNumDisplay = "";
+
 // loop through all number buttons, assign event listeners
 for (let i = 0; i < numBtns.length; i++) {
     // get text content of current button
