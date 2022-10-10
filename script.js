@@ -102,7 +102,7 @@ function convertArrayToNum(array) {
     let jointArray = array.join();
     let noCommas = jointArray.replace(/,/g, '');
     // will return NaN if no number is entered!!!!
-    let result = parseInt(noCommas);;
+    let result = parseFloat(noCommas);;
     if (isNaN(result)) {
         return undefined;
     }
