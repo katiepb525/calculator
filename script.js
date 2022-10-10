@@ -137,13 +137,19 @@ for (let i = 0; i < opBtns.length; i++) {
             // if first input is empty....
             case (selectedInputs.firstInput == undefined):
 
-                // if there is a value present in numInputs...
+                // if there is a value present in numInputs... **and that last value isnt a decimal or an operator (seperate function?)
                 if (numInputs.length > 0) {
+
 
                     // take first num, convert value to number
                     let firstNum = convertArrayToNum(numInputs);
                     // update object list
                     selectedInputs.firstInput = firstNum;
+
+                    // add current number to upper display along with operand being used
+                    lastNumDisplay += `${selectedInputs.firstInput} ${selectedInputs.operator} `;
+                    formerNumsDiv.textContent = lastNumDisplay;
+
                     // clear numInputs;
                     numInputs = [];
 
