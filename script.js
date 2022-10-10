@@ -189,5 +189,22 @@ equalsBtn.addEventListener("click", () => {
     // update object list 
     selectedInputs.secondInput = secondNum;
 
+    // execute operation, store in result
+    selectedInputs.result = operate(selectedInputs.operator, selectedInputs.firstInput, selectedInputs.secondInput);
+
+    // replace first input with result
+    selectedInputs.firstInput = selectedInputs.result;
+
+    // return result
+    console.log(selectedInputs.result);
+
+    // reset second input
+    selectedInputs.secondInput = undefined;
+
+    // reset result
+    selectedInputs.result = undefined;
+
+    // clear numInputs;
+    numInputs = [];
 
 })
