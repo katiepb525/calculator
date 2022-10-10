@@ -179,5 +179,6 @@ for (let i = 0; i < opBtns.length; i++) {
 
 /// EQUALS BUTTON
 
-// get element by id
+// get equals button by id
 const equalsBtn = document.getElementById('equals');
+
