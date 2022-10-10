@@ -181,8 +181,24 @@ for (let i = 0; i < opBtns.length; i++) {
                     // replace first input with result
                     selectedInputs.firstInput = selectedInputs.result;
 
+                    // add second number to upper display along with operand being used
+                    lastNumDisplay += `${selectedInputs.secondInput} ${selectedInputs.operator} `;
+                    formerNumsDiv.textContent = lastNumDisplay;
+
+                    // clear current displayed number/lower display
+                    displayNum = "";
+                    currentNumDiv.textContent = displayNum;
+
+                    // clear numInputs;
+                    numInputs = [];
+
+                    // update result in display
+                    displayNum = selectedInputs.result;
+                    currentNumDiv.textContent = displayNum;
+
                     // return result
                     console.log(selectedInputs.result);
+
 
                     // reset second input
                     selectedInputs.secondInput = undefined;
