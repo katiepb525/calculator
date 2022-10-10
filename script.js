@@ -127,41 +127,51 @@ for (let i = 0; i < opBtns.length; i++) {
         switch (true) {
             // if first input is empty....
             case (selectedInputs.firstInput == undefined):
-                // take first num, convert value to number
-                let firstNum = convertArrayToNum(numInputs);
-                // update object list
-                selectedInputs.firstInput = firstNum;
-                // clear numInputs;
-                numInputs = [];
 
+                // if there is a value present in numInputs...
+                if (numInputs.length > 0) {
+
+                    // take first num, convert value to number
+                    let firstNum = convertArrayToNum(numInputs);
+                    // update object list
+                    selectedInputs.firstInput = firstNum;
+                    // clear numInputs;
+                    numInputs = [];
+
+
+                }
                 break;
 
             // if first input has value and second does not..
             case (selectedInputs.firstInput != undefined && selectedInputs.secondInput == undefined):
 
-                // take second num, put into variable
-                let secondNum = convertArrayToNum(numInputs);
+                // if there is a value present in numInputs...
+                if (numInputs.length > 0) {
+                    // take second num, put into variable
+                    let secondNum = convertArrayToNum(numInputs);
 
-                // update object list 
-                selectedInputs.secondInput = secondNum;
+                    // update object list 
+                    selectedInputs.secondInput = secondNum;
 
-                // execute operation, store in result
-                selectedInputs.result = operate(selectedInputs.operator, selectedInputs.firstInput, selectedInputs.secondInput);
+                    // execute operation, store in result
+                    selectedInputs.result = operate(selectedInputs.operator, selectedInputs.firstInput, selectedInputs.secondInput);
 
-                // replace first input with result
-                selectedInputs.firstInput = selectedInputs.result;
+                    // replace first input with result
+                    selectedInputs.firstInput = selectedInputs.result;
 
-                // return result
-                console.log(selectedInputs.result);
+                    // return result
+                    console.log(selectedInputs.result);
 
-                // reset second input
-                selectedInputs.secondInput = undefined;
+                    // reset second input
+                    selectedInputs.secondInput = undefined;
 
-                // reset result
-                selectedInputs.result = undefined;
+                    // reset result
+                    selectedInputs.result = undefined;
 
-                // clear numInputs;
-                numInputs = [];
+                    // clear numInputs;
+                    numInputs = [];
+
+                }
 
                 break;
 
