@@ -160,7 +160,10 @@ for (let i = 0; i < opBtns.length; i++) {
                 // reset result
                 selectedInputs.result = undefined;
 
+                // clear numInputs;
+                numInputs = [];
 
+                break;
 
 // create clear function (clears display, calculated former and current values)
 
