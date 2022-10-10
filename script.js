@@ -118,8 +118,23 @@ function convertArrayToNum(array) {
 // get an array of all of the operator buttons
 const opBtns = document.getElementsByClassName('btn operator');
 
+// loop through all operator buttons, assign event listeners
+for (let i = 0; i < opBtns.length; i++) {
+    // get current operator
+    const currOp = opBtns[i].textContent;
+    // when button is clicked
+    opBtns[i].addEventListener("click", () => {
+        switch (true) {
+            // if first input is empty....
+            case (selectedInputs.firstInput == undefined):
+                // take first num, convert value to number
+                let firstNum = convertArrayToNum(numInputs);
+                // update object list
+                selectedInputs.firstInput = firstNum;
+                // clear numInputs;
+                numInputs = [];
 
-}
+                break;
 
 )
 
