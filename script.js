@@ -148,6 +148,8 @@ for (let i = 0; i < opBtns.length; i++) {
                 // execute operation, store in result
                 selectedInputs.result = operate(selectedInputs.operator, selectedInputs.firstInput, selectedInputs.secondInput);
 
+                // replace first input with result
+                selectedInputs.firstInput = selectedInputs.result;
 
 
 
