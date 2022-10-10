@@ -111,6 +111,13 @@ function convertArrayToNum(array) {
     }
 }
 
+//////// DECIMAL BUTTON //////////
+
+// get decimal button by id
+const decimalBtn = document.getElementById('decimal');
+
+
+
 ///// OPERATOR BUTTONS /////
 // event listeners for all operation functions (sum, subtract, etc.)
 
