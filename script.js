@@ -133,6 +133,9 @@ for (let i = 0; i < opBtns.length; i++) {
     const currOp = opBtns[i].textContent;
     // when button is clicked
     opBtns[i].addEventListener("click", () => {
+        // update selected operator
+        selectedInputs.operator = currOp;
+        console.log(numInputs);
         switch (true) {
             // if first input is empty....
             case (selectedInputs.firstInput == undefined):
@@ -196,9 +199,7 @@ for (let i = 0; i < opBtns.length; i++) {
 
                 break;
         }
-        // update selected operator
-        selectedInputs.operator = currOp;
-        console.log(numInputs);
+
     })
 }
 
