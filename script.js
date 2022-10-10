@@ -193,28 +193,33 @@ for (let i = 0; i < opBtns.length; i++) {
 const equalsBtn = document.getElementById('equals');
 
 equalsBtn.addEventListener("click", () => {
-    // grab second num
-    let secondNum = convertArrayToNum(numInputs);
 
-    // update object list 
-    selectedInputs.secondInput = secondNum;
+    // check if num Input and operand are present!
+    if (numInputs.length > 0 && selectedInputs.operator != undefined) {
+        // grab second num
+        let secondNum = convertArrayToNum(numInputs);
 
-    // execute operation, store in result
-    selectedInputs.result = operate(selectedInputs.operator, selectedInputs.firstInput, selectedInputs.secondInput);
+        // update object list 
+        selectedInputs.secondInput = secondNum;
 
-    // replace first input with result
-    selectedInputs.firstInput = selectedInputs.result;
+        // execute operation, store in result
+        selectedInputs.result = operate(selectedInputs.operator, selectedInputs.firstInput, selectedInputs.secondInput);
 
-    // return result
-    console.log(selectedInputs.result);
+        // replace first input with result
+        selectedInputs.firstInput = selectedInputs.result;
 
-    // reset second input
-    selectedInputs.secondInput = undefined;
+        // return result
+        console.log(selectedInputs.result);
 
-    // reset result
-    selectedInputs.result = undefined;
+        // reset second input
+        selectedInputs.secondInput = undefined;
 
-    // clear numInputs;
-    numInputs = [];
+        // reset result
+        selectedInputs.result = undefined;
+
+        // clear numInputs;
+        numInputs = [];
+    }
+
 
 })
