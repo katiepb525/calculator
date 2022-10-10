@@ -182,3 +182,6 @@ for (let i = 0; i < opBtns.length; i++) {
 // get equals button by id
 const equalsBtn = document.getElementById('equals');
 
+equalsBtn.addEventListener("click", () => {
+
+})
