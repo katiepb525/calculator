@@ -165,7 +165,15 @@ for (let i = 0; i < opBtns.length; i++) {
 
                 break;
 
-// create clear function (clears display, calculated former and current values)
+            default:
 
-// add event listener for clear function
+                console.log("oops!");
 
+                break;
+        }
+        // update selected operator
+        selectedInputs.operator = currOp;
+        console.log(numInputs);
+    })
+
+}
