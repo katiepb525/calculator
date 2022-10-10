@@ -70,6 +70,7 @@ const formerNumsDiv = document.createElement("div");
 formerNumsDiv.classList.add("formerNumsList");
 divDisplay.appendChild(formerNumsDiv);
 formerNumsDiv.style.fontSize = "14px"
+
 // store the currently entered number in its own div
 const currentNumDiv = document.createElement("div");
 currentNumDiv.classList.add("currentNum");
@@ -110,7 +111,6 @@ function convertArrayToNum(array) {
         return result;
     }
 }
-
 
 ///// OPERATOR BUTTONS /////
 // event listeners for all operation functions (sum, subtract, etc.)
