@@ -175,5 +175,9 @@ for (let i = 0; i < opBtns.length; i++) {
         selectedInputs.operator = currOp;
         console.log(numInputs);
     })
-
 }
+
+/// EQUALS BUTTON
+
+// get element by id
+const equalsBtn = document.getElementById('equals');
