@@ -154,7 +154,11 @@ for (let i = 0; i < opBtns.length; i++) {
                 // return result
                 console.log(selectedInputs.result);
 
+                // reset second input
+                selectedInputs.secondInput = undefined;
 
+                // reset result
+                selectedInputs.result = undefined;
 
 
 
