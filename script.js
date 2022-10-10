@@ -153,6 +153,10 @@ for (let i = 0; i < opBtns.length; i++) {
                     lastNumDisplay += `${selectedInputs.firstInput} ${selectedInputs.operator} `;
                     formerNumsDiv.textContent = lastNumDisplay;
 
+                    // clear current displayed number/lower display
+                    displayNum = "";
+                    currentNumDiv.textContent = displayNum;
+
                     // clear numInputs;
                     numInputs = [];
 
