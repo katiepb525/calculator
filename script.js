@@ -100,6 +100,7 @@ for (let i = 0; i < numBtns.length; i++) {
 
 }
 
+
 // function to convert the current typed number from the display into an actual number 
 function convertArrayToNum(array) {
     let jointArray = array.join();
@@ -118,7 +119,6 @@ function convertArrayToNum(array) {
 
 // get decimal button by id
 const decimalBtn = document.getElementById('decimal');
-
 
 
 ///// OPERATOR BUTTONS /////
