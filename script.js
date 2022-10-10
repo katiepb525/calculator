@@ -142,6 +142,8 @@ for (let i = 0; i < opBtns.length; i++) {
                 // take second num, put into variable
                 let secondNum = convertArrayToNum(numInputs);
 
+                // update object list 
+                selectedInputs.secondInput = secondNum;
 
 // when any operation is called..
 
