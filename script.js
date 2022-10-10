@@ -238,11 +238,18 @@ const clearBtn = document.getElementById("clear");
 clearBtn.addEventListener("click", () => {
 
     // reset all keys in selectedInputs
-    for (const key in selectedInputs) {
+    for (let key in selectedInputs) {
         key = undefined;
     }
 
     // clear numInputs
     numInputs = [];
+
+    // clear displayNum + text content of display
+
+    displayNum = " ";
+
+    currentNumDiv.textContent = displayNum;
+
 
 })
