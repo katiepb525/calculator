@@ -145,7 +145,8 @@ for (let i = 0; i < opBtns.length; i++) {
                 // update object list 
                 selectedInputs.secondInput = secondNum;
 
-// when any operation is called..
+                // execute operation, store in result
+                selectedInputs.result = operate(selectedInputs.operator, selectedInputs.firstInput, selectedInputs.secondInput);
 
 
 
