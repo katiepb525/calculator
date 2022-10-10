@@ -229,3 +229,20 @@ equalsBtn.addEventListener("click", () => {
 
 
 })
+
+// CLEAR BUTTON
+
+// grab clear button
+const clearBtn = document.getElementById("clear");
+
+clearBtn.addEventListener("click", () => {
+
+    // reset all keys in selectedInputs
+    for (const key in selectedInputs) {
+        key = undefined;
+    }
+
+    // clear numInputs
+    numInputs = [];
+
+})
