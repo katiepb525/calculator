@@ -183,5 +183,11 @@ for (let i = 0; i < opBtns.length; i++) {
 const equalsBtn = document.getElementById('equals');
 
 equalsBtn.addEventListener("click", () => {
+    // grab second num
+    let secondNum = convertArrayToNum(numInputs);
+
+    // update object list 
+    selectedInputs.secondInput = secondNum;
+
 
 })
