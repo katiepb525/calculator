@@ -136,7 +136,8 @@ for (let i = 0; i < opBtns.length; i++) {
 
                 break;
 
-)
+            // if first input has value and second does not..
+            case (selectedInputs.firstInput != undefined && selectedInputs.secondInput == undefined):
 
 
 
