@@ -89,10 +89,9 @@ for (let i = 0; i < numBtns.length; i++) {
         // add current DISPLAYED number to div display's text content
         displayNum += rawNum;
         currentNumDiv.textContent = displayNum;
-        // convert rawNum to number value
-        currNum = Number(rawNum);
+
         // push to array
-        numInputs.push(currNum);
+        numInputs.push(rawNum);
         console.log(numInputs);
     })
 
