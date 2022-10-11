@@ -77,8 +77,8 @@ currentNumDiv.textContent = "0";
 // store the first DISPLAYED number 
 let firstDisplayNum = "";
 
-// store the last DISPLAYED number
-let lastNumDisplay = "";
+// store the second DISPLAYED number
+let secondDisplayNum = "";
 
 // loop through all number buttons, assign event listeners
 for (let i = 0; i < numBtns.length; i++) {
@@ -179,9 +179,9 @@ for (let i = 0; i < opBtns.length; i++) {
                     // return result
                     console.log(selectedInputs.result);
 
-
                     // reset second input
                     selectedInputs.secondInput = undefined;
+                    secondDisplayNum = "";
 
                     // reset result
                     selectedInputs.result = undefined;
@@ -233,6 +233,7 @@ equalsBtn.addEventListener("click", () => {
 
         // reset second input
         selectedInputs.secondInput = undefined;
+        secondDisplayNum = "";
 
         // reset result
         selectedInputs.result = undefined;
