@@ -274,9 +274,9 @@ const clearBtn = document.getElementById("clear");
 clearBtn.addEventListener("click", () => {
 
     // reset all keys in selectedInputs
-    for (let key in selectedInputs) {
-        key = undefined;
-    }
+    Object.keys(selectedInputs).forEach(key => {
+        selectedInputs[key] = undefined;
+    });
 
     // clear numInputs
     numInputs = [];
