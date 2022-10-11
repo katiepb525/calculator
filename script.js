@@ -279,9 +279,14 @@ clearBtn.addEventListener("click", () => {
     });
 
     // clear numInputs
-    numInputs = [];
+    numInputs = [0];
 
-    // clear displayNum + text content of display
+    // clear all display vars
+
+    firstDisplayNum = "";
+    secondDisplayNum = "";
+
+    currentNumDiv.textContent = "0";
 
 
 })
