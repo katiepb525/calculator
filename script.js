@@ -60,7 +60,10 @@ const numBtns = document.getElementsByClassName('btn num');
 let currNum;
 
 // store an array of all selected num inputs
-let numInputs = [];
+let numInputs = [0];
+
+
+///// DISPLAY 
 
 // select the display div itself
 const divDisplay = document.querySelector('.display');
@@ -75,6 +78,7 @@ formerNumsDiv.style.fontSize = "14px"
 const currentNumDiv = document.createElement("div");
 currentNumDiv.classList.add("currentNum");
 divDisplay.appendChild(currentNumDiv);
+currentNumDiv.textContent = "0";
 
 // store the current DISPLAYED number 
 let displayNum = "";
@@ -143,6 +147,9 @@ for (let i = 0; i < opBtns.length; i++) {
                 // if there is a value present in numInputs... **and that last value isnt a decimal or an operator (seperate function?)
                 if (numInputs.length > 0) {
 
+                    // clear current displayed number/lower display
+                    displayNum = "";
+                    currentNumDiv.textContent = displayNum;
 
                     // take first num, convert value to number
                     let firstNum = convertArrayToNum(numInputs);
@@ -153,13 +160,8 @@ for (let i = 0; i < opBtns.length; i++) {
                     lastNumDisplay += `${selectedInputs.firstInput} ${selectedInputs.operator} `;
                     formerNumsDiv.textContent = lastNumDisplay;
 
-                    // clear current displayed number/lower display
-                    displayNum = "";
-                    currentNumDiv.textContent = displayNum;
-
                     // clear numInputs;
-                    numInputs = [];
-
+                    numInputs = [0];
 
                 }
                 break;
@@ -190,11 +192,7 @@ for (let i = 0; i < opBtns.length; i++) {
                     currentNumDiv.textContent = displayNum;
 
                     // clear numInputs;
-                    numInputs = [];
-
-                    // update result in display
-                    displayNum = selectedInputs.result;
-                    currentNumDiv.textContent = displayNum;
+                    numInputs = [0];
 
                     // return result
                     console.log(selectedInputs.result);
@@ -254,7 +252,7 @@ equalsBtn.addEventListener("click", () => {
         selectedInputs.result = undefined;
 
         // clear numInputs;
-        numInputs = [];
+        numInputs = [0];
     }
 
 
