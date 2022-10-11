@@ -68,12 +68,6 @@ let numInputs = [0];
 // select the display div itself
 const divDisplay = document.querySelector('.display');
 
-// store the formerly entered numbers and operators in a div called "formerNumsList"
-const formerNumsDiv = document.createElement("div");
-formerNumsDiv.classList.add("formerNumsList");
-divDisplay.appendChild(formerNumsDiv);
-formerNumsDiv.style.fontSize = "14px"
-
 // store the currently entered number in its own div
 const currentNumDiv = document.createElement("div");
 currentNumDiv.classList.add("currentNum");
@@ -147,18 +141,10 @@ for (let i = 0; i < opBtns.length; i++) {
                 // if there is a value present in numInputs... **and that last value isnt a decimal or an operator (seperate function?)
                 if (numInputs.length > 0) {
 
-                    // clear current displayed number/lower display
-                    displayNum = "";
-                    currentNumDiv.textContent = displayNum;
-
                     // take first num, convert value to number
                     let firstNum = convertArrayToNum(numInputs);
                     // update object list
                     selectedInputs.firstInput = firstNum;
-
-                    // add current number to upper display along with operand being used
-                    lastNumDisplay += `${selectedInputs.firstInput} ${selectedInputs.operator} `;
-                    formerNumsDiv.textContent = lastNumDisplay;
 
                     // clear numInputs;
                     numInputs = [0];
@@ -183,13 +169,9 @@ for (let i = 0; i < opBtns.length; i++) {
                     // replace first input with result
                     selectedInputs.firstInput = selectedInputs.result;
 
-                    // add second number to upper display along with operand being used
-                    lastNumDisplay += `${selectedInputs.secondInput} ${selectedInputs.operator} `;
-                    formerNumsDiv.textContent = lastNumDisplay;
-
-                    // clear current displayed number/lower display
-                    displayNum = "";
-                    currentNumDiv.textContent = displayNum;
+                    // display result in lower div
+                    firstDisplayNum = selectedInputs.result;
+                    currentNumDiv.textContent = firstDisplayNum;
 
                     // clear numInputs;
                     numInputs = [0];
