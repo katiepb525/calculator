@@ -74,8 +74,8 @@ currentNumDiv.classList.add("currentNum");
 divDisplay.appendChild(currentNumDiv);
 currentNumDiv.textContent = "0";
 
-// store the current DISPLAYED number 
-let displayNum = "";
+// store the first DISPLAYED number 
+let firstDisplayNum = "";
 
 // store the last DISPLAYED number
 let lastNumDisplay = "";
@@ -224,6 +224,10 @@ equalsBtn.addEventListener("click", () => {
         // replace first input with result
         selectedInputs.firstInput = selectedInputs.result;
 
+        // display result in lower div
+        firstDisplayNum = selectedInputs.result;
+        currentNumDiv.textContent = firstDisplayNum;
+
         // return result
         console.log(selectedInputs.result);
 
@@ -257,9 +261,9 @@ clearBtn.addEventListener("click", () => {
 
     // clear displayNum + text content of display
 
-    displayNum = " ";
 
-    currentNumDiv.textContent = displayNum;
+})
+
 
 
 })
