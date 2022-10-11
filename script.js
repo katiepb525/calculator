@@ -87,13 +87,34 @@ for (let i = 0; i < numBtns.length; i++) {
 
     // when button is clicked
     numBtns[i].addEventListener("click", () => {
-        // add current DISPLAYED number to div display's text content
-        displayNum += rawNum;
-        currentNumDiv.textContent = displayNum;
+        switch (true) {
+            case (selectedInputs.firstInput == undefined):
+                // add current DISPLAYED number to div display's text content
+                firstDisplayNum += rawNum;
+                currentNumDiv.textContent = firstDisplayNum;
 
-        // push to array
-        numInputs.push(rawNum);
-        console.log(numInputs);
+                // push to array
+                numInputs.push(rawNum);
+                console.log(numInputs);
+                break;
+
+            case (selectedInputs.firstInput != undefined && selectedInputs.secondInput == undefined):
+
+                // clear display
+                currentNumDiv.textContent = "";
+
+                // add second DISPLAYED number to div display's text content
+
+                secondDisplayNum += rawNum;
+                currentNumDiv.textContent = secondDisplayNum;
+
+                // push to array
+                numInputs.push(rawNum);
+                console.log(numInputs);
+
+                break;
+
+        }
     })
 
 }
