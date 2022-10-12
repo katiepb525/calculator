@@ -157,7 +157,17 @@ decimalBtn.addEventListener("click", () => {
     }
     else {
         numInputs.push('.');
+        if (onFirstOrSecondInput() == "first") {
+            firstDisplayNum += '.';
+            currentNumDiv.textContent = firstDisplayNum;
+        }
+        else if (onFirstOrSecondInput() == "second") {
+            secondDisplayNum += '.';
+            currentNumDiv.textContent = secondDisplayNum;
+
+        }
     }
+
 
     console.log(numInputs);
 });
