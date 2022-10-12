@@ -139,6 +139,21 @@ function convertArrayToNum(array) {
 // get decimal button by id
 const decimalBtn = document.getElementById('decimal');
 
+decimalBtn.addEventListener("click", () => {
+
+    if (numInputs.includes('.')) {
+        return;
+    }
+    else {
+        numInputs.push('.');
+    }
+
+    console.log(numInputs);
+});
+
+
+
+
 
 ///// OPERATOR BUTTONS /////
 // event listeners for all operation functions (sum, subtract, etc.)
