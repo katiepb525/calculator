@@ -134,6 +134,17 @@ function convertArrayToNum(array) {
     }
 }
 
+// check if current input is on first or second
+function onFirstOrSecondInput() {
+    switch (true) {
+        case (selectedInputs.firstInput == undefined):
+            return "first";
+
+        case (selectedInputs.firstInput != undefined && selectedInputs.secondInput == undefined):
+            return "second"
+    }
+}
+
 //////// DECIMAL BUTTON //////////
 
 // get decimal button by id
