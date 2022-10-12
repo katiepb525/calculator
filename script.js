@@ -195,7 +195,7 @@ for (let i = 0; i < opBtns.length; i++) {
             // if first input is empty....
             case (selectedInputs.firstInput == undefined):
 
-                // if there is a value present in numInputs... **and that last value isnt a decimal or an operator (seperate function?)
+                // if there is a value present in numInputs...
                 if (numInputs.length > 0) {
 
                     // take first num, convert value to number
@@ -214,6 +214,7 @@ for (let i = 0; i < opBtns.length; i++) {
 
                 // if there is a value present in numInputs...
                 if (numInputs.length > 0) {
+
                     // take second num, put into variable
                     let secondNum = convertArrayToNum(numInputs);
 
@@ -247,7 +248,6 @@ for (let i = 0; i < opBtns.length; i++) {
                     numInputs = [];
 
                 }
-
                 break;
 
             default:
@@ -267,7 +267,7 @@ const equalsBtn = document.getElementById('equals');
 
 equalsBtn.addEventListener("click", () => {
 
-    // check if num Input and operand are present!
+    // check if num Input and operand are present! **and that last value isnt a decimal
     if (numInputs.length > 0 && selectedInputs.operator != undefined) {
         // grab second num
         let secondNum = convertArrayToNum(numInputs);
@@ -323,10 +323,6 @@ clearBtn.addEventListener("click", () => {
     secondDisplayNum = "";
 
     currentNumDiv.textContent = "0";
-
-
-})
-
 
 
 })
